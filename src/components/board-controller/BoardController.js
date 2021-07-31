@@ -1,6 +1,5 @@
 import { useLazyQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
-import { DEALS_QUERY } from "../../queries/queries";
 import DealsBoard from "../deals-board/DealsBoard";
 
 export default function BoardController({ variables, query }) {
@@ -32,6 +31,7 @@ export default function BoardController({ variables, query }) {
         <DealsBoard dealsData={dealsArray} />
         {showLoadMore ? (
           <button
+            className="board-controller-button"
             onClick={() => getDeals({ variables: { start, ...variables } })}
           >
             Load More
