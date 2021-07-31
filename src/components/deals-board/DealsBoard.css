@@ -1,0 +1,14 @@
+.dealsboard {
+  display: grid;
+  /* background-color: floralwhite; */
+  justify-items: center;
+  row-gap: 30px;
+}
+
+.dealsboard-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.dealsboard-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
