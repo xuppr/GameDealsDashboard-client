@@ -57,8 +57,8 @@ describe('DealCard style',() => {
     const gogData = {
       "title": "Freedom Force",
       "storeID": "7",
-      "salePrice": "1.49",
-      "normalPrice": "5.99",
+      "salePrice": 1.49,
+      "normalPrice": 5.99,
       "thumb": "https:\/\/cdn.cloudflare.steamstatic.com\/steam\/apps\/8880\/capsule_sm_120.jpg?t=1569012854"
     }
 
