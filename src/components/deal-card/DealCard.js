@@ -13,7 +13,7 @@ const DealCard = ({dealData}) => {
 
   return <div className={`${storeClass} ${linkClass} deal-card`}>
             <div className='thumb-container'>
-              <img src={thumb}></img>
+              <img src={thumb} alt={title + ' image'}></img>
             </div>
             <h3>{title}</h3>
             <h1>{salePrice}$</h1>
