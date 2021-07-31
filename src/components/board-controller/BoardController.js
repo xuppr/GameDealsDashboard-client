@@ -6,9 +6,7 @@ import DealsBoard from "../deals-board/DealsBoard";
 export default function BoardController({ variables, query }) {
   const [dealsArray, setDealsArray] = useState([]);
   const [showLoadMore, setShowLoadMore] = useState(false);
-  const [getDeals, { data, loading, error }] = useLazyQuery(DEALS_QUERY);
-
-  console.log("from board controller!!");
+  const [getDeals, { data, loading, error }] = useLazyQuery(query);
 
   useEffect(() => {
     getDeals({ variables: { start: 0, ...variables } });
