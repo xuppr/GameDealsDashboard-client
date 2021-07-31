@@ -1,0 +1,31 @@
+.deal-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  border: 3px solid black;
+}
+
+.steam-class {
+  color: #007384;
+}
+
+.gog-class {
+  color: #F57520;
+}
+
+.humble-class {
+  color: #D9272B;
+}
+
+.steam-class .thumb-container {
+  background-color: #007384;
+}
+
+.gog-class .thumb-container {
+  background-color: #F57520;
+}
+
+.humble-class .thumb-container {
+  background-color: #D9272B;
+}
