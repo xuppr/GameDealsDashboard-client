@@ -36,7 +36,7 @@ const WHOAMI_QUERY = gql`
   }
 `;
 
-const TOKEN_AUTH_MUTATION= gql`
+const TOKEN_AUTH_MUTATION = gql`
     mutation TokenAuth($username: String!, $password: String!) {
         tokenAuth(username: $username, password: $password){
             token
