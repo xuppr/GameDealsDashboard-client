@@ -36,9 +36,28 @@ const WHOAMI_QUERY = gql`
   }
 `;
 
+const TOKEN_AUTH_MUTATION= gql`
+    mutation TokenAuth($username: String!, $password: String!) {
+        tokenAuth(username: $username, password: $password){
+            token
+            payload
+        }
+    }
+`
+
+const CREATE_USER_MUTATION = gql`
+    mutation CreateUser($username: String!, $password: String!){
+        createUser(username: $username, password: $password){
+            userCreationConfirm
+        }
+    }
+`
+
 
 export { 
   ONE_PER_STORE_QUERY, 
   DEALS_QUERY,
-  WHOAMI_QUERY
+  WHOAMI_QUERY,
+  TOKEN_AUTH_MUTATION,
+  CREATE_USER_MUTATION
 };
