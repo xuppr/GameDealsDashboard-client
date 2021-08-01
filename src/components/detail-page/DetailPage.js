@@ -4,6 +4,8 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { DEAL_BY_ID_QUERY } from "../../queries/queries";
 
+import "./DetailPage.css";
+
 const STORE_BASE_URL = "https://www.cheapshark.com/redirect?dealID=";
 
 export default function DetailPage() {
@@ -30,18 +32,26 @@ export default function DetailPage() {
     } = data.dealById;
 
     return (
-      <div>
-        <img src={thumb} />
+      <div className="detail-page-content">
+        <img src={thumb} width="200px" />
         <h1>{title}</h1>
         <h3>on {{ 1: "Steam", 2: "Gog", 3: "Humble Store" }[storeID]}</h3>
 
-        <div>
-          <ul>
-            <li>Price: {salePrice}$</li> <p>Instead of {normalPrice}$</p>
-            <li>Deal rating: {dealRating}</li>
-            <li>Game rating: {steamRatingText}</li>
-            <li>Released: {new Date(releaseDate).getFullYear()}</li>
-          </ul>
+        <div className="info-block">
+          <div className="flex-wrapper">
+            <p>
+              Price: {salePrice}$ <span>Instead of {normalPrice}$</span>
+            </p>
+
+            <p>Deal rating: {dealRating}</p>
+            <p>Game rating: {steamRatingText}</p>
+            {releaseDate > 0 ? (
+              <p>
+                Released:{" "}
+                {new Date(releaseDate * 1000).toLocaleDateString("en-US")}
+              </p>
+            ) : null}
+          </div>
         </div>
 
         <div>
