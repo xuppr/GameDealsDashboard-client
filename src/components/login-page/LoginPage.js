@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import { TOKEN_AUTH_MUTATION } from "../../queries/queries";
+import { Link } from "react-router-dom";
 
 export default function LoginPage({ username, setUsername }) {
   const [tokenAuth, { error, data }] = useMutation(TOKEN_AUTH_MUTATION);
@@ -37,6 +38,7 @@ export default function LoginPage({ username, setUsername }) {
 
   return (
     <div className="login-page">
+      <h1>Login: </h1>
       {error ? <p style={{ color: "red" }}>Wrong Credentials!</p> : null}
       <form onSubmit={handleSubmit} className="login-form">
         <div>
@@ -57,7 +59,11 @@ export default function LoginPage({ username, setUsername }) {
           ></input>
         </div>
 
-        <button type="submit">Log In</button>
+        <p>
+          Don't have an account? Register <Link to="/register">here</Link>
+        </p>
+
+        <button type="submit">continue</button>
       </form>
     </div>
   );
