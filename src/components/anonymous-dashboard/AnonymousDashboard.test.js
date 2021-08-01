@@ -3,6 +3,7 @@ import { MockedProvider } from "@apollo/client/testing";
 import AnonymousDashboard from "./AnonymousDashboard";
 import { ONE_PER_STORE_QUERY } from "../../queries/queries";
 import { GraphQLError } from "graphql";
+import { BrowserRouter } from "react-router-dom";
 
 const mocks = [];
 
@@ -11,7 +12,9 @@ it("shows loading text before query has resolved", async () => {
 
   const component = (
     <MockedProvider mocks={mocks} addTypename={false}>
-      <AnonymousDashboard />
+      <BrowserRouter>
+        <AnonymousDashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 
@@ -35,7 +38,9 @@ it("show a message error when a GraphQLError occurred", async () => {
 
   const component = (
     <MockedProvider mocks={mocks} addTypename={false}>
-      <AnonymousDashboard />
+      <BrowserRouter>
+        <AnonymousDashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 
@@ -61,7 +66,9 @@ it("shows a message error when a generic error occurred", async () => {
 
   const component = (
     <MockedProvider mocks={mocks} addTypename={false}>
-      <AnonymousDashboard />
+      <BrowserRouter>
+        <AnonymousDashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 
@@ -115,7 +122,9 @@ it("shows the correct cards when data is ready", async () => {
 
   const component = (
     <MockedProvider mocks={mocks} addTypename={false}>
-      <AnonymousDashboard />
+      <BrowserRouter>
+        <AnonymousDashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 

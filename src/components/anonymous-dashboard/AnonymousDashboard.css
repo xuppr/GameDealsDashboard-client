@@ -1,3 +1,15 @@
 .anonymous-dashboard {
   margin-top: 100px;
 }
+
+.buttons-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+}
+
+.link-button {
+  margin: 30px;
+}
