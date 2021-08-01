@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { ONE_PER_STORE_QUERY } from "../../queries/queries";
 import DealsBoard from "../deals-board/DealsBoard";
+import "./AnonymousDashboard.css";
 
 export default function AnonymousDashboard() {
   const { data, error, loading } = useQuery(ONE_PER_STORE_QUERY);
@@ -23,7 +24,7 @@ export default function AnonymousDashboard() {
 
   const dealsData = data["onePerStore"];
   return (
-    <div>
+    <div className="anonymous-dashboard">
       <DealsBoard dealsData={dealsData} />
     </div>
   );
