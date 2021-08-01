@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import DashboardPage from "./DashboardPage";
 import { MockedProvider } from "@apollo/client/testing";
 import { DEALS_QUERY } from "../../queries/queries";
+import { BrowserRouter } from "react-router-dom";
 
 const mock0 = {
   request: {
@@ -277,7 +278,9 @@ const setupDashboardPageWithVariables = (variables) => {
 
   const component = (
     <MockedProvider mocks={[mock0, mock1]} addTypename={false}>
-      <DashboardPage />
+      <BrowserRouter>
+        <DashboardPage />
+      </BrowserRouter>
     </MockedProvider>
   );
 
@@ -297,7 +300,9 @@ describe("default", () => {
   beforeEach(() => {
     const component = (
       <MockedProvider mocks={[mock0]} addTypename={false}>
-        <DashboardPage />
+        <BrowserRouter>
+          <DashboardPage />
+        </BrowserRouter>
       </MockedProvider>
     );
 

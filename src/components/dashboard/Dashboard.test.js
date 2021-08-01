@@ -3,6 +3,7 @@ import { MockedProvider } from "@apollo/client/testing";
 import Dashboard from "./Dashboard";
 import { DEALS_QUERY } from "../../queries/queries";
 import { GraphQLError } from "graphql";
+import { BrowserRouter } from "react-router-dom";
 
 it("shows loading text before query has resolved", () => {
   const component = (
@@ -141,7 +142,9 @@ it("renders the correct data after the query is completed", async () => {
 
   const component = (
     <MockedProvider mocks={[mock]} addTypename={false}>
-      <Dashboard />
+      <BrowserRouter>
+        <Dashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 
@@ -245,7 +248,9 @@ it("show the load more button after the query is completed", async () => {
 
   const component = (
     <MockedProvider mocks={[mock]} addTypename={false}>
-      <Dashboard />
+      <BrowserRouter>
+        <Dashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 
@@ -350,7 +355,9 @@ it("not shows the load more button if isEnd is true", async () => {
 
   const component = (
     <MockedProvider mocks={[mock]} addTypename={false}>
-      <Dashboard />
+      <BrowserRouter>
+        <Dashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 
@@ -545,7 +552,9 @@ it("loads more data when load more button is clicked", async () => {
 
   const component = (
     <MockedProvider mocks={[mock0, mock1]} addTypename={false}>
-      <Dashboard />
+      <BrowserRouter>
+        <Dashboard />
+      </BrowserRouter>
     </MockedProvider>
   );
 
