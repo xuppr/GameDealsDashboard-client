@@ -1,13 +1,13 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MockedProvider } from "@apollo/client/testing";
-import BoardController from "./BoardController";
+import Dashboard from "./Dashboard";
 import { DEALS_QUERY } from "../../queries/queries";
 import { GraphQLError } from "graphql";
 
 it("shows loading text before query has resolved", () => {
   const component = (
     <MockedProvider mocks={[]} addTypename={false}>
-      <BoardController query={DEALS_QUERY} />
+      <Dashboard />
     </MockedProvider>
   );
 
@@ -29,7 +29,7 @@ it("shows an error message if an occurred", async () => {
 
   const component = (
     <MockedProvider mocks={[mock]} addTypename={false}>
-      <BoardController query={DEALS_QUERY} />
+      <Dashboard />
     </MockedProvider>
   );
 
@@ -141,7 +141,7 @@ it("renders the correct data after the query is completed", async () => {
 
   const component = (
     <MockedProvider mocks={[mock]} addTypename={false}>
-      <BoardController query={DEALS_QUERY} />
+      <Dashboard />
     </MockedProvider>
   );
 
@@ -245,7 +245,7 @@ it("show the load more button after the query is completed", async () => {
 
   const component = (
     <MockedProvider mocks={[mock]} addTypename={false}>
-      <BoardController query={DEALS_QUERY} />
+      <Dashboard />
     </MockedProvider>
   );
 
@@ -350,7 +350,7 @@ it("not shows the load more button if isEnd is true", async () => {
 
   const component = (
     <MockedProvider mocks={[mock]} addTypename={false}>
-      <BoardController query={DEALS_QUERY} />
+      <Dashboard />
     </MockedProvider>
   );
 
@@ -545,7 +545,7 @@ it("loads more data when load more button is clicked", async () => {
 
   const component = (
     <MockedProvider mocks={[mock0, mock1]} addTypename={false}>
-      <BoardController query={DEALS_QUERY} />
+      <Dashboard />
     </MockedProvider>
   );
 
