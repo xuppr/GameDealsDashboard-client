@@ -36,7 +36,7 @@ export default function LoginPage({ username, setUsername }) {
   };
 
   return (
-    <div>
+    <div className="login-page">
       {error ? <p style={{ color: "red" }}>Wrong Credentials!</p> : null}
       <form onSubmit={handleSubmit} className="login-form">
         <div>
