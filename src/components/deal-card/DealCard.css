@@ -6,16 +6,20 @@
   border: 3px solid black;
 }
 
+.link-class:hover {
+  cursor: pointer;
+}
+
 .steam-class {
   color: #007384;
 }
 
 .gog-class {
-  color: #F57520;
+  color: #f57520;
 }
 
 .humble-class {
-  color: #D9272B;
+  color: #d9272b;
 }
 
 .steam-class .thumb-container {
@@ -23,9 +27,9 @@
 }
 
 .gog-class .thumb-container {
-  background-color: #F57520;
+  background-color: #f57520;
 }
 
 .humble-class .thumb-container {
-  background-color: #D9272B;
+  background-color: #d9272b;
 }

@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { DEALS_QUERY } from "../../queries/queries";
 import DealsBoard from "../deals-board/DealsBoard";
+import "./Dashboard.css";
 
 export default function Dashboard({ variables }) {
   const { data, loading, error, fetchMore } = useQuery(DEALS_QUERY, {
@@ -38,9 +39,12 @@ export default function Dashboard({ variables }) {
 
     return (
       <div>
-        <DealsBoard dealsData={dealsList} />
+        <DealsBoard dealsData={dealsList} className="deals-board" />
         {!isEnd ? (
-          <button onClick={() => onFetchMore(dealsList.length)}>
+          <button
+            onClick={() => onFetchMore(dealsList.length)}
+            className="loadmore-button"
+          >
             Load More
           </button>
         ) : null}
