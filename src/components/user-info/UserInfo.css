@@ -1,0 +1,27 @@
+.userinfo-btn {
+  font-size: 1.8rem;
+}
+
+.userinfo-menu {
+  position: absolute;
+  background-color: rgb(240, 254, 255);
+  right: 0px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.userinfo-name {
+  text-align: center;
+}
+
+.userinfo-logout-container {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.userinfo-logout-btn:hover {
+  cursor: pointer;
+}
