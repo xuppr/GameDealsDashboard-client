@@ -30,8 +30,15 @@ const DEALS_QUERY = gql`
   }
 `;
 
+const WHOAMI_QUERY = gql`
+  query {
+    whoami
+  }
+`;
+
 
 export { 
   ONE_PER_STORE_QUERY, 
   DEALS_QUERY,
+  WHOAMI_QUERY
 };
