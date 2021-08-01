@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background-color: cadetblue;
+  background-color: lightgreen;
   align-items: center;
   padding: 5px;
 }
 
 .navbar a {
-  color: chartreuse;
+  color: black;
   text-decoration: none;
 }

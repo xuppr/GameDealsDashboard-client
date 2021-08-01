@@ -43,7 +43,7 @@ function App() {
         <nav>
           <Navbar>
             <Link to="/">
-              <h1>Game Deals Dashboard</h1>
+              <h1>Game Deals</h1>
             </Link>
             <UserInfo username={username} setUsername={setUsername} />
           </Navbar>
