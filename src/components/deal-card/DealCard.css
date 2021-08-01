@@ -6,6 +6,10 @@
   border: 3px solid black;
 }
 
+.deal-card p {
+  text-decoration: none;
+}
+
 .link-class:hover {
   cursor: pointer;
 }

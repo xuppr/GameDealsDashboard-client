@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import DealCard from "./DealCard";
 
 describe("DealCard data", () => {
@@ -12,7 +13,12 @@ describe("DealCard data", () => {
         "https://cdn.cloudflare.steamstatic.com/steam/apps/238010/capsule_sm_120.jpg?t=1619788192",
     };
 
-    render(<DealCard dealData={dealData} />);
+    const component = (
+      <BrowserRouter>
+        <DealCard dealData={dealData} />
+      </BrowserRouter>
+    );
+    render(component);
 
     const titleElement = screen.getByText(
       /Deus Ex: Human Revolution - Director's Cut/i
@@ -44,7 +50,12 @@ describe("DealCard style", () => {
         "https://cdn.cloudflare.steamstatic.com/steam/apps/269710/capsule_sm_120.jpg?t=1625169247",
     };
 
-    const { container } = render(<DealCard dealData={steamData} />);
+    const component = (
+      <BrowserRouter>
+        <DealCard dealData={steamData} />
+      </BrowserRouter>
+    );
+    const { container } = render(component);
 
     expect(container.firstChild).toHaveClass("steam-class");
     expect(container.firstChild.classList.contains("gog-class")).toBe(false);
@@ -61,7 +72,12 @@ describe("DealCard style", () => {
         "https://cdn.cloudflare.steamstatic.com/steam/apps/8880/capsule_sm_120.jpg?t=1569012854",
     };
 
-    const { container } = render(<DealCard dealData={gogData} />);
+    const component = (
+      <BrowserRouter>
+        <DealCard dealData={gogData} />
+      </BrowserRouter>
+    );
+    const { container } = render(component);
 
     expect(container.firstChild).toHaveClass("gog-class");
     expect(container.firstChild.classList.contains("steam-class")).toBe(false);
@@ -78,7 +94,12 @@ describe("DealCard style", () => {
         "https://cdn.cloudflare.steamstatic.com/steam/apps/238010/capsule_sm_120.jpg?t=1619788192",
     };
 
-    const { container } = render(<DealCard dealData={humbleData} />);
+    const component = (
+      <BrowserRouter>
+        <DealCard dealData={humbleData} />
+      </BrowserRouter>
+    );
+    const { container } = render(component);
 
     expect(container.firstChild).toHaveClass("humble-class");
     expect(container.firstChild.classList.contains("steam-class")).toBe(false);
@@ -96,8 +117,14 @@ describe("DealCard style", () => {
         "https://cdn.cloudflare.steamstatic.com/steam/apps/238010/capsule_sm_120.jpg?t=1619788192",
     };
 
-    const { container } = render(<DealCard dealData={dealData} />);
-    expect(container.firstChild).toHaveClass("link-class");
+    const component = (
+      <BrowserRouter>
+        <DealCard dealData={dealData} />
+      </BrowserRouter>
+    );
+
+    const { container } = render(component);
+    expect(container.firstChild.firstChild).toHaveClass("link-class");
   });
 
   it("is not hoverable when dealData has  dealID", () => {
@@ -110,7 +137,14 @@ describe("DealCard style", () => {
         "https://cdn.cloudflare.steamstatic.com/steam/apps/238010/capsule_sm_120.jpg?t=1619788192",
     };
 
-    const { container } = render(<DealCard dealData={dealData} />);
-    expect(container.firstChild.classList.contains("link-class")).toBe(false);
+    const component = (
+      <BrowserRouter>
+        <DealCard dealData={dealData} />
+      </BrowserRouter>
+    );
+    const { container } = render(component);
+    expect(
+      container.firstChild.firstChild.classList.contains("link-class")
+    ).toBe(false);
   });
 });
