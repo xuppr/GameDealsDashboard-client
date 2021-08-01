@@ -10,9 +10,11 @@ export default function Dashboard({ variables }) {
     },
   });
 
+  // console.log("VARIABLES : ", variables);
+
   const onFetchMore = (start) => {
     fetchMore({
-      variables: { start },
+      variables: { start, ...variables },
       updateQuery: (previousResult, { fetchMoreResult }) => {
         return {
           deals: {

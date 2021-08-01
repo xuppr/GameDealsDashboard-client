@@ -1,0 +1,7 @@
+.dashboard-selection-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
