@@ -114,11 +114,11 @@ describe("DetailPage cases", () => {
     const elements = [
       screen.getByText("The Inevitability"),
       screen.getByRole("img"),
-      screen.getByText(`Released: ${new Date(1492387200).getFullYear()}`),
       screen.getByText(`Deal rating: 5.1`),
       screen.getByText(`Price: 0.49$`),
       screen.getByText("Instead of 4.99$"),
       screen.getByText("on Steam"),
+      screen.getByText("Game rating: Mixed"),
     ];
 
     elements.forEach((e) => expect(e).toBeInTheDocument());
