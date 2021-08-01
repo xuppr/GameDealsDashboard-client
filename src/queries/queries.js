@@ -30,6 +30,22 @@ const DEALS_QUERY = gql`
   }
 `;
 
+const DEAL_BY_ID_QUERY = gql`
+  query dealById($id: String) {
+    dealById(id: $id) {
+      title
+      storeID
+      dealID
+      thumb
+      releaseDate
+      steamRatingText
+      dealRating
+      salePrice
+      normalPrice
+    }
+  }
+`
+
 const WHOAMI_QUERY = gql`
   query {
     whoami
@@ -59,5 +75,6 @@ export {
   DEALS_QUERY,
   WHOAMI_QUERY,
   TOKEN_AUTH_MUTATION,
-  CREATE_USER_MUTATION
+  CREATE_USER_MUTATION,
+  DEAL_BY_ID_QUERY
 };
