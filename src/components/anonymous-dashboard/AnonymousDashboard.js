@@ -24,9 +24,10 @@ export default function AnonymousDashboard() {
   }
 
   const dealsData = data["onePerStore"];
+  const filteredData = dealsData.filter((e) => e !== null);
   return (
     <div className="anonymous-dashboard">
-      <DealsBoard dealsData={dealsData} />
+      <DealsBoard dealsData={filteredData} />
       <div className="buttons-container">
         <button className="link-button">
           <Link to="/login">Login</Link>
