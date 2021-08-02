@@ -13,3 +13,10 @@ After running the Game Deals Dashboard server on localhost:8000, inside the proj
 ```
 npm run start
 ```
+
+How to build
+--------
+
+```
+npm run build
+```
