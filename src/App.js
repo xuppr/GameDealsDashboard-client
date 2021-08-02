@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link, Redirect } from "react-router-dom";
 import { useApolloClient } from "@apollo/client";
 import { WHOAMI_QUERY } from "./queries/queries";
 
@@ -53,6 +53,9 @@ function App() {
         </nav>
 
         <Switch>
+          <Route exact path="/GameDealsDashboard-client">
+            <Redirect to="/"/>
+          </Route>
           <Route exact path="/">
             {username ? <DashboardPage /> : <AnonymousDashboard />}
           </Route>
