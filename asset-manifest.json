@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/GameDealsDashboard-client/static/css/main.b0d88a90.chunk.css",
+    "main.js": "/GameDealsDashboard-client/static/js/main.94599111.chunk.js",
+    "main.js.map": "/GameDealsDashboard-client/static/js/main.94599111.chunk.js.map",
+    "runtime-main.js": "/GameDealsDashboard-client/static/js/runtime-main.5e85d979.js",
+    "runtime-main.js.map": "/GameDealsDashboard-client/static/js/runtime-main.5e85d979.js.map",
+    "static/js/2.9c781725.chunk.js": "/GameDealsDashboard-client/static/js/2.9c781725.chunk.js",
+    "static/js/2.9c781725.chunk.js.map": "/GameDealsDashboard-client/static/js/2.9c781725.chunk.js.map",
+    "index.html": "/GameDealsDashboard-client/index.html",
+    "static/css/main.b0d88a90.chunk.css.map": "/GameDealsDashboard-client/static/css/main.b0d88a90.chunk.css.map",
+    "static/js/2.9c781725.chunk.js.LICENSE.txt": "/GameDealsDashboard-client/static/js/2.9c781725.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e85d979.js",
+    "static/js/2.9c781725.chunk.js",
+    "static/css/main.b0d88a90.chunk.css",
+    "static/js/main.94599111.chunk.js"
+  ]
+}
