@@ -46,7 +46,9 @@ function App() {
             <Link to="/">
               <h1>Game Deals</h1>
             </Link>
-            <UserInfo username={username} setUsername={setUsername} />
+            {username ? (
+              <UserInfo username={username} setUsername={setUsername} />
+            ) : null}
           </Navbar>
         </nav>
 
