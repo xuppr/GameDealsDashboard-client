@@ -43,6 +43,7 @@ export default function RegistrationPage({ username, setUsername }) {
 
         setInputUsername("");
         setInputPassword("");
+        setInputConfirmPassword("");
       }, 1000);
     }
   }, [data, error]);
